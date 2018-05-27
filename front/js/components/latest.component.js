@@ -1,6 +1,6 @@
 import axios from "axios";
 import { timer } from "rxjs";
-import { switchMap, tap } from "rxjs/operators";
+import { switchMap } from "rxjs/operators";
 
 import { Component } from "../component";
 import { fetchRandomNumbers } from "../actions";
