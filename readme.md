@@ -6,15 +6,19 @@
 2.  Install dependencies & start:
 
 ```bash
-in catalog blackcompany-task npm run start-server
-in catalog front npm start
+in catalog blackcompany-task
+npm run start-server
+
+in catalog front
+npm start
 ```
 
 3.  Go to http://localhost:8080/
 4.  To run tests:
 
 ```bash
-$ in catalog front npm run test
+ in catalog front
+ npm run test
 ```
 
 Hi! This is our recruitment task for FrontEnd Developer.
