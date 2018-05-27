@@ -3,7 +3,7 @@ import { timer } from "rxjs";
 import { switchMap, tap } from "rxjs/operators";
 
 import { Component } from "../component";
-import { fetchRandomNumbers } from "../actions/actions";
+import { fetchRandomNumbers } from "../actions";
 
 export function Latest(selector, store) {
   Component.call(this, selector);

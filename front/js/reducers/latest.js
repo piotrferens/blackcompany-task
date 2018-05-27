@@ -1,4 +1,4 @@
-import { FETCH_RANDOM_NUMBERS } from "../actions/actions";
+import { FETCH_RANDOM_NUMBERS } from "../actions";
 
 export function latest(state = [], action) {
   switch (action.type) {
