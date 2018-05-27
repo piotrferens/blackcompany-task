@@ -3,11 +3,12 @@ import { timer } from "rxjs";
 import { switchMap, tap } from "rxjs/operators";
 
 import { Component } from "../component";
+import { fetchRandomNumbers } from "../actions/actions";
 
 export function Latest(selector, store) {
   Component.call(this, selector);
   this.store = store;
-  this.delayTime = 2000;
+  this.delayTime = 10000;
 }
 
 Latest.prototype = Object.create(Component.prototype);
@@ -22,9 +23,7 @@ Latest.prototype.init = function() {
           .catch(console.error)
       )
     )
-    .subscribe(data => {
-      this.store.dispatch({ type: "FETCH_RANDOM_NUMBERS", payload: data });
-    });
+    .subscribe(data => this.store.dispatch(fetchRandomNumbers(data)));
 };
 
 Latest.prototype.render = function(numbers) {
